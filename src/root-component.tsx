@@ -3,6 +3,7 @@ import { RoutePath } from "./types";
 import { NotFoundPage } from "./pages/not-found-page";
 import { BlogPage } from "./pages/blog-page";
 import { BlogDetailsPage } from "./pages/blog-details-page";
+import "./styles/main.sass";
 
 export const RootComponent = () => {
   return (
