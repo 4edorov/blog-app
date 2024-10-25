@@ -8,7 +8,10 @@ export const blogsApiSlice = createApi({
     getBlogs: build.query<Blog[], BlogsApiQueryParams>({
       query: ({ page = 1, limit = 10 }) => `?_limit=${limit}&_page=${page}`,
     }),
+    getBlog: build.query<Blog, string | undefined>({
+      query: (blogId) => `/${blogId}`,
+    }),
   }),
 });
 
-export const { useGetBlogsQuery } = blogsApiSlice;
+export const { useGetBlogsQuery, useGetBlogQuery } = blogsApiSlice;

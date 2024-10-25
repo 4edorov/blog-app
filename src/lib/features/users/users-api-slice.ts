@@ -8,7 +8,7 @@ export const usersApiSlice = createApi({
     getUsers: build.query<User[], void>({
       query: () => "",
     }),
-    getUser: build.query<User, number>({
+    getUser: build.query<User, number | undefined>({
       query: (userId) => `/${userId}`,
     }),
   }),

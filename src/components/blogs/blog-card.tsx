@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { AppOrg, Blog } from "../../types";
+import { sanitizeTitle } from "../../utils";
 
 interface BlogCardProps {
   blog: Blog;
@@ -8,13 +9,6 @@ interface BlogCardProps {
 
 export const BlogCard = ({ blog, author = "" }: BlogCardProps) => {
   const { title = "", id } = blog;
-
-  const sanitizeTitle = (text?: string) => {
-    if (!text) {
-      return text;
-    }
-    return text[0].toUpperCase() + text.slice(1);
-  };
 
   return (
     <div className="blog-card">

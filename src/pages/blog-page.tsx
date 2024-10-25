@@ -35,7 +35,7 @@ export const BlogPage = () => {
   return (
     <MainLayout>
       <MainSection>
-        <h1>Blog Page</h1>
+        <h1>Blogs</h1>
         {blogsData &&
           blogsData.map((blog, key) => {
             const author = usersNameMap?.get(blog.userId);
