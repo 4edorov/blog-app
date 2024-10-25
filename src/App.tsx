@@ -1,5 +1,11 @@
+import { Provider } from "react-redux";
 import { RootComponent } from "./root-component";
+import { store } from "./lib/store";
 
 export const App = () => {
-  return <RootComponent />;
+  return (
+    <Provider store={store}>
+      <RootComponent />
+    </Provider>
+  );
 };
