@@ -2,9 +2,11 @@ import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import { blogsApiSlice } from "./features/blogs/blogs-api-slice";
 import { paginationSlice } from "./features/pagination/pagination-slice";
 import { usersApiSlice } from "./features/users/users-api-slice";
+import { modalSlice } from "./features/modal/modal-slice";
 
 const rootReducer = combineSlices(
   paginationSlice,
+  modalSlice,
   blogsApiSlice,
   usersApiSlice
 );
