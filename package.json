@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "homepage": "https://4edorov.github.io/blog-app/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
